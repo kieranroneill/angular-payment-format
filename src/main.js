@@ -1,0 +1,1 @@
+var ngPaymentFormat = angular.module('ng-payment-format', []);
