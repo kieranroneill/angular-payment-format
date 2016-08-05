@@ -36,7 +36,7 @@ Include ```angular.js``` and the ```ng-payment-format.js``` files in the respect
 Next, inject the ```ng-payment-format``` module into your Angular application:
 ```javascript
 var myApp = angular.module('myApp', ['ng-payment-format']);
-
+```
 That's all there is to it! :) See the [demo](https://github.com/kieranroneill/ng-payment-format/tree/master/demo) for a working example.
 
 ## License
