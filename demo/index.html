@@ -6,16 +6,59 @@
         <title>Payment Formatting</title>
 
         <!-- Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="css/demo.css">
+
+        <!-- 3rd Party la la da -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
 
     <body ng-controller="DemoController">
-        <h1>Payment Format Examples</h1>
+        <div class="container">
+            <h1>Payment Format Examples</h1>
 
+            <form>
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 form-group">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" class="form-control" id="cardNumber" placeholder="Card number" ng-model="payment.card" payment-format="card">
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-md-offset-2 form-group">
+                        <label for="cvc">CVC</label>
+                        <input type="text" class="form-control" id="cvc"  placeholder="CVC" ng-model="payment.cvc" payment-format="cvc">
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 form-group">
+                        <label for="expiryDate">Expiry Date</label>
+                        <input type="text" class="form-control" id="expiryDate" placeholder="Expiry Date" ng-model="payment.expiryDate" payment-format="expiry">
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-offset-2 form-group">
+                        <label for="sortCode">Sort code</label>
+                        <input type="text" class="form-control" id="sortCode" placeholder="Sort code" ng-model="payment.sortCode" payment-format="sortCode">
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
 
         <!-- Scripts -->
-        <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="../dist/ng-payment-format.js"></script>
+        <script type="text/javascript" src="js/angular.js"></script>
+        <script type="text/javascript" src="js/ng-payment-format.js"></script>
         <script type="text/javascript" src="js/demo.js"></script>
 
     </body>

@@ -7,13 +7,14 @@ module.exports = {
     },
 
     Paths: {
+        demo: './demo',
+        dist: './dist',
+        karmaConf: __dirname + '/../karma.conf.js',
         main: [
             './src/main.js',
             './src/**/*.js'
         ],
-        watch: './src/**/*.js',
-        dist: './dist',
-        karmaConf: __dirname + '/../karma.conf.js'
+        watch: './src/**/*.js'
     },
 
     Plugins: {
@@ -23,6 +24,7 @@ module.exports = {
                 'del',
                 'gulp-*',
                 'gulp.*',
+                'main-bower-files',
                 'run-sequence',
                 'streamqueue'
             ]
